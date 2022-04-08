@@ -1,0 +1,532 @@
+*------------------------------------------------------------*
+User:                u59396733
+Date:                08 April 2022
+Time:                17:40:33
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+          Measurement    Frequency
+Role         Level         Count
+ 
+ID         INTERVAL           1
+INPUT      INTERVAL          19
+INPUT      NOMINAL            1
+TARGET     NOMINAL            1
+ 
+ 
+ 
+ 
+Model Events
+ 
+                                    Number
+                     Measurement      of
+ Target     Event       Level       Levels      Order       Label
+ 
+good_bad    GOOD       NOMINAL         2      Descending
+ 
+ 
+ 
+ 
+Predicted and decision variables
+ 
+Type         Variable          Label
+ 
+TARGET       good_bad
+PREDICTED    P_good_badgood    Predicted: good_bad=good
+RESIDUAL     R_good_badgood    Residual: good_bad=good
+PREDICTED    P_good_badbad     Predicted: good_bad=bad
+RESIDUAL     R_good_badbad     Residual: good_bad=bad
+FROM         F_good_bad        From: good_bad
+INTO         I_good_bad        Into: good_bad
+ 
+ 
+ 
+ 
+ 
+The HPFOREST Procedure
+ 
+      Performance Information
+ 
+Execution Mode       Single-Machine
+Number of Threads    2
+ 
+ 
+                 Data Access Information
+ 
+Data                         Engine    Role     Path
+ 
+WORK.HPDMFOREST_TRAINDATA    V9        Input    On Client
+ 
+ 
+                   Model Information
+ 
+Parameter                          Value
+ 
+Variables to Try                       4    (Default)
+Maximum Trees                         20
+Actual Trees                          20
+Inbag Fraction                       0.6
+Prune Fraction                         0    (Default)
+Prune Threshold                      0.1    (Default)
+Leaf Fraction                    0.00001    (Default)
+Leaf Size Setting                      1    (Default)
+Leaf Size Used                         1
+Category Bins                         30
+Interval Bins                        100
+Minimum Category Size                  5
+Node Size                         100000    (Default)
+Maximum Depth                         50
+Alpha                               0.05
+Exhaustive                          5000
+Rows of Sequence to Skip               5    (Default)
+Split Criterion                        .    Gini
+Preselection Method                    .    Loh
+Missing Value Handling                 .    Valid value
+ 
+ 
+                          Number of Observations
+ 
+Type                                 NTrain          NValid          NTotal
+ 
+Number of Observations Read             699             200             899
+Number of Observations Used             699             200             899
+ 
+ 
+               Baseline Fit Statistics
+ 
+Statistic                        Value      Validation
+ 
+Average Square Error             0.210           0.210
+Misclassification Rate           0.299           0.300
+Log Loss                         0.610           0.611
+ 
+ 
+                                                                    Fit Statistics
+ 
+                          Average    Average    Average
+                           Square     Square     Square    Misclassification    Misclassification    Misclassification        Log       Log        Log
+   Number       Number      Error      Error      Error                 Rate                 Rate                 Rate       Loss      Loss       Loss
+ of Trees    of Leaves    (Train)      (OOB)    (Valid)              (Train)                (OOB)              (Valid)    (Train)     (OOB)    (Valid)
+ 
+        1            5      0.195      0.209      0.200                0.283                0.321                0.290      0.576     0.609      0.588
+        2           14      0.181      0.217      0.189                0.273                0.331                0.305      0.539     0.760      0.556
+        3           20      0.175      0.204      0.179                0.272                0.306                0.315      0.526     0.632      0.533
+        4           26      0.173      0.195      0.176                0.273                0.304                0.315      0.521     0.603      0.526
+        5           29      0.176      0.192      0.181                0.282                0.291                0.320      0.528     0.564      0.539
+        6           34      0.174      0.188      0.180                0.280                0.294                0.320      0.523     0.554      0.536
+        7           40      0.173      0.189      0.179                0.276                0.294                0.320      0.520     0.555      0.532
+        8           49      0.170      0.187      0.177                0.265                0.291                0.310      0.514     0.554      0.530
+        9           56      0.168      0.185      0.177                0.259                0.298                0.290      0.509     0.546      0.528
+       10           62      0.168      0.184      0.177                0.258                0.286                0.300      0.509     0.545      0.529
+       11           75      0.166      0.183      0.176                0.252                0.287                0.280      0.505     0.542      0.527
+       12           79      0.167      0.183      0.177                0.265                0.286                0.300      0.506     0.543      0.531
+       13           84      0.167      0.182      0.178                0.260                0.285                0.295      0.506     0.541      0.532
+       14           90      0.167      0.182      0.178                0.259                0.288                0.295      0.506     0.540      0.533
+       15           92      0.168      0.182      0.178                0.262                0.286                0.310      0.507     0.540      0.532
+       16           98      0.168      0.182      0.178                0.262                0.288                0.300      0.507     0.540      0.531
+       17          107      0.167      0.183      0.177                0.262                0.282                0.305      0.506     0.542      0.530
+       18          117      0.166      0.182      0.176                0.265                0.283                0.305      0.504     0.541      0.528
+       19          119      0.167      0.183      0.177                0.268                0.282                0.300      0.507     0.542      0.530
+       20          123      0.168      0.183      0.177                0.263                0.289                0.300      0.509     0.544      0.531
+ 
+ 
+                             Loss Reduction Variable Importance
+ 
+              Number                     OOB       Valid                     OOB       Valid
+Variable    of Rules        Gini        Gini        Gini      Margin      Margin      Margin
+ 
+checking          22    0.025331     0.01904     0.02405    0.050663     0.04317     0.05187
+history           14    0.010546     0.00297     0.00629    0.021091     0.01364     0.01701
+duration           8    0.004508     0.00173     0.00146    0.009017     0.00640     0.00677
+savings            4    0.001931     0.00136     0.00015    0.003862     0.00359     0.00336
+resident           1    0.000205     0.00030    -0.00057    0.000409     0.00056    -0.00014
+purpose           13    0.005657     0.00025    -0.00088    0.011314     0.00708     0.00738
+telephon           2    0.000221     0.00016    -0.00044    0.000441     0.00022    -0.00035
+property           6    0.002611     0.00009     0.00180    0.005222     0.00221     0.00318
+foreign            2    0.000479     0.00002     0.00008    0.000957     0.00028     0.00041
+job                0    0.000000     0.00000     0.00000    0.000000     0.00000     0.00000
+depends            0    0.000000     0.00000     0.00000    0.000000     0.00000     0.00000
+coapp              2    0.000407    -0.00006    -0.00077    0.000813     0.00048    -0.00023
+existcr            1    0.000239    -0.00018     0.00000    0.000477     0.00000     0.00000
+marital            2    0.000372    -0.00052     0.00021    0.000744    -0.00026     0.00037
+amount             3    0.001699    -0.00067     0.00013    0.003398     0.00074     0.00154
+housing            2    0.000831    -0.00077    -0.00026    0.001662    -0.00003     0.00037
+other              5    0.001634    -0.00146     0.00148    0.003267     0.00061     0.00335
+employed           4    0.001389    -0.00163    -0.00107    0.002777     0.00019     0.00176
+age                6    0.003504    -0.00207    -0.00118    0.007008     0.00167     0.00280
+installp           6    0.001995    -0.00258    -0.00259    0.003991    -0.00047    -0.00084
+ 
+ 
+          Procedure Task Timing
+ 
+Task                 Seconds      Percent
+ 
+Reading Data            0.00       3.20%
+Training Forest         0.08      96.77%
+Saving Model            0.00       0.03%
+ 
+ 
+ 
+ 
+ 
+The ASTORE Procedure
+ 
+               Store Key
+ 
+E84219F44ED39B61DA1BE333801A4B07566F25EF
+ 
+ 
+          Basic Information
+ 
+Analytic Engine    hpforest
+Time Created       08Apr2022:17:40:24
+ 
+ 
+                                Input Variables
+ 
+                                                                      Format
+Name              Length    Role     Type                RawType      Name
+ 
+age                    8    Input    Interval            Num
+amount                 8    Input    Interval            Num
+checking               8    Input    Interval            Num
+coapp                  8    Input    Interval            Num
+duration               8    Input    Interval            Num
+employed               8    Input    Interval            Num
+existcr                8    Input    Interval            Num
+foreign                8    Input    Interval            Num
+history                8    Input    Interval            Num
+housing                8    Input    Interval            Num
+installp               8    Input    Interval            Num
+marital                8    Input    Interval            Num
+other                  8    Input    Interval            Num
+property               8    Input    Interval            Num
+resident               8    Input    Interval            Num
+savings                8    Input    Interval            Num
+telephon               8    Input    Interval            Num
+purpose                8    Input    Classification      Character
+ 
+ 
+                           Output Variables
+ 
+Name                    Length    Type         Label
+ 
+P_good_badGOOD               8    Num          Predicted: good_bad=GOOD
+P_good_badBAD                8    Num          Predicted: good_bad=BAD
+I_good_bad                  32    Character    Into: good_bad
+_WARN_                       4    Character    Warnings
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+The HP4SCORE Procedure
+ 
+      Performance Information
+ 
+Execution Mode       Single-Machine
+Number of Threads    1
+ 
+ 
+             Data Access Information
+ 
+Data                Engine    Role      Path
+ 
+WORK._SCORETRAIN    V9        Input     On Client
+WORK._OUTTEMP       V9        Output    On Client
+ 
+ 
+          Number of Observations
+ 
+Type                                      N
+ 
+Number of Observations Read             699
+Number of Observations Used             699
+Sum of Frequencies Used                 699
+ 
+ 
+        Procedure Task Timing
+ 
+Task              Seconds      Percent
+ 
+Scoring Data         0.00     100.00%
+ 
+ 
+ 
+The HP4SCORE Procedure
+ 
+      Performance Information
+ 
+Execution Mode       Single-Machine
+Number of Threads    1
+ 
+ 
+                Data Access Information
+ 
+Data                      Engine    Role      Path
+ 
+EMWS1.HPDMFOREST_TRAIN    V9        Input     On Client
+WORK._OUTTEMP             V9        Output    On Client
+ 
+ 
+          Number of Observations
+ 
+Type                                      N
+ 
+Number of Observations Read             699
+Number of Observations Used             699
+Sum of Frequencies Used                 699
+ 
+ 
+        Procedure Task Timing
+ 
+Task              Seconds      Percent
+ 
+Scoring Data         0.00     100.00%
+ 
+ 
+ 
+The HP4SCORE Procedure
+ 
+      Performance Information
+ 
+Execution Mode       Single-Machine
+Number of Threads    1
+ 
+ 
+                 Data Access Information
+ 
+Data                         Engine    Role      Path
+ 
+EMWS1.HPDMFOREST_VALIDATE    V9        Input     On Client
+WORK._OUTTEMP                V9        Output    On Client
+ 
+ 
+          Number of Observations
+ 
+Type                                      N
+ 
+Number of Observations Read             200
+Number of Observations Used             200
+Sum of Frequencies Used                 200
+ 
+ 
+        Procedure Task Timing
+ 
+Task              Seconds      Percent
+ 
+Scoring Data         0.00     100.00%
+ 
+ 
+ 
+The HP4SCORE Procedure
+ 
+      Performance Information
+ 
+Execution Mode       Single-Machine
+Number of Threads    1
+ 
+ 
+               Data Access Information
+ 
+Data                     Engine    Role      Path
+ 
+EMWS1.HPDMFOREST_TEST    V9        Input     On Client
+WORK._OUTTEMP            V9        Output    On Client
+ 
+ 
+          Number of Observations
+ 
+Type                                      N
+ 
+Number of Observations Read             101
+Number of Observations Used             101
+Sum of Frequencies Used                 101
+ 
+ 
+        Procedure Task Timing
+ 
+Task              Seconds      Percent
+ 
+Scoring Data         0.00     100.00%
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Fit Statistics
+ 
+Target=good_bad Target Label=' '
+ 
+   Fit
+Statistics    Statistics Label                     Train    Validation       Test
+ 
+ _ASE_        Average Squared Error                 0.17        0.177       0.183
+ _DIV_        Divisor for ASE                    1398.00      400.000     202.000
+ _MAX_        Maximum Absolute Error                0.84        0.870       0.805
+ _NOBS_       Sum of Frequencies                  699.00      200.000     101.000
+ _RASE_       Root Average Squared Error            0.41        0.421       0.428
+ _SSE_        Sum of Squared Errors               234.95       70.890      36.992
+ _DISF_       Frequency of Classified Cases       699.00      200.000     101.000
+ _MISC_       Misclassification Rate                0.26        0.300       0.297
+ _WRONG_      Number of Wrong Classifications     184.00       60.000      30.000
+ 
+ 
+ 
+ 
+Classification Table
+ 
+Data Role=TRAIN Target Variable=good_bad Target Label=' '
+ 
+                       Target        Outcome     Frequency       Total
+Target    Outcome    Percentage    Percentage      Count      Percentage
+ 
+ BAD       BAD         96.2963       12.4402         26          3.7196
+ GOOD      BAD          3.7037        0.2041          1          0.1431
+ BAD       GOOD        27.2321       87.5598        183         26.1803
+ GOOD      GOOD        72.7679       99.7959        489         69.9571
+ 
+ 
+Data Role=VALIDATE Target Variable=good_bad Target Label=' '
+ 
+                       Target        Outcome     Frequency       Total
+Target    Outcome    Percentage    Percentage      Count      Percentage
+ 
+ BAD       BAD         50.0000        6.6667          4            2
+ GOOD      BAD         50.0000        2.8571          4            2
+ BAD       GOOD        29.1667       93.3333         56           28
+ GOOD      GOOD        70.8333       97.1429        136           68
+ 
+ 
+ 
+ 
+Event Classification Table
+ 
+Data Role=TRAIN Target=good_bad Target Label=' '
+ 
+  False       True        False       True
+Negative    Negative    Positive    Positive
+ 
+    1          26          183         489
+ 
+ 
+Data Role=VALIDATE Target=good_bad Target Label=' '
+ 
+  False       True        False       True
+Negative    Negative    Positive    Positive
+ 
+    4           4          56          136
+ 
+ 
+ 
+ 
+Assessment Score Rankings
+ 
+Data Role=TRAIN Target Variable=good_bad Target Label=' '
+ 
+                                                                                           Mean
+                               Cumulative        %       Cumulative      Number of      Posterior
+Depth      Gain       Lift        Lift       Response    % Response    Observations    Probability
+ 
+   5     42.6531    1.42653      1.42653      100.000      100.000          35           0.88174
+  10     42.6531    1.42653      1.42653      100.000      100.000          35           0.86179
+  15     41.2945    1.38577      1.41294       97.143       99.048          35           0.83618
+  20     40.6152    1.38577      1.40615       97.143       98.571          35           0.81937
+  25     39.3924    1.34501      1.39392       94.286       97.714          35           0.80397
+  30     37.2187    1.26350      1.37219       88.571       96.190          35           0.78965
+  35     34.5015    1.18198      1.34501       82.857       94.286          35           0.77004
+  40     31.4446    1.10047      1.31445       77.143       92.143          35           0.74613
+  45     28.6142    1.05971      1.28614       74.286       90.159          35           0.72072
+  50     27.1650    1.14122      1.27165       80.000       89.143          35           0.69925
+  55     26.3499    1.18198      1.26350       82.857       88.571          35           0.67893
+  60     26.3499    1.26350      1.26350       88.571       88.571          35           0.66815
+  65     23.5281    0.89668      1.23528       62.857       86.593          35           0.65446
+  70     19.3628    0.65213      1.19363       45.714       83.673          35           0.64111
+  75     17.1114    0.85592      1.17111       60.000       82.095          35           0.62821
+  80     14.3772    0.73364      1.14377       51.429       80.179          35           0.61458
+  85     11.2454    0.61137      1.11245       42.857       77.983          35           0.59793
+  90      7.7823    0.48910      1.07782       34.286       75.556          35           0.57151
+  95      4.0402    0.36682      1.04040       25.714       72.932          35           0.53407
+ 100      0.0000    0.20978      1.00000       14.706       70.100          34           0.46392
+ 
+ 
+Data Role=VALIDATE Target Variable=good_bad Target Label=' '
+ 
+                                                                                           Mean
+                               Cumulative        %       Cumulative      Number of      Posterior
+Depth      Gain       Lift        Lift       Response    % Response    Observations    Probability
+ 
+   5     42.8571    1.42857      1.42857        100        100.000          10           0.88051
+  10     28.5714    1.14286      1.28571         80         90.000          10           0.85976
+  15     33.3333    1.42857      1.33333        100         93.333          10           0.84289
+  20     35.7143    1.42857      1.35714        100         95.000          10           0.82597
+  25     34.2857    1.28571      1.34286         90         94.000          10           0.81085
+  30     28.5714    1.00000      1.28571         70         90.000          10           0.80040
+  35     28.5714    1.28571      1.28571         90         90.000          10           0.78361
+  40     26.7857    1.14286      1.26786         80         88.750          10           0.76060
+  45     25.3968    1.14286      1.25397         80         87.778          10           0.74201
+  50     27.1429    1.42857      1.27143        100         89.000          10           0.71515
+  55     23.3766    0.85714      1.23377         60         86.364          10           0.69240
+  60     21.4286    1.00000      1.21429         70         85.000          10           0.67833
+  65     20.8791    1.14286      1.20879         80         84.615          10           0.66317
+  70     19.3878    1.00000      1.19388         70         83.571          10           0.64847
+  75     14.2857    0.42857      1.14286         30         80.000          10           0.64010
+  80     14.2857    1.14286      1.14286         80         80.000          10           0.62938
+  85     10.0840    0.42857      1.10084         30         77.059          10           0.61504
+  90      7.1429    0.57143      1.07143         40         75.000          10           0.58070
+  95      2.2556    0.14286      1.02256         10         71.579          10           0.53122
+ 100      0.0000    0.57143      1.00000         40         70.000          10           0.48796
+ 
+ 
+ 
+ 
+Assessment Score Distribution
+ 
+Data Role=TRAIN Target Variable=good_bad Target Label=' '
+ 
+ Posterior     Number                     Mean
+Probability      of      Number of     Posterior
+   Range       Events    Nonevents    Probability    Percentage
+ 
+ 0.85-0.90       70           0         0.87177        10.0143
+ 0.80-0.85       93           4         0.82154        13.8770
+ 0.75-0.80       76          13         0.77845        12.7325
+ 0.70-0.75       58          19         0.72342        11.0157
+ 0.65-0.70       90          23         0.67273        16.1660
+ 0.60-0.65       68          60         0.62687        18.3119
+ 0.55-0.60       21          39         0.57805         8.5837
+ 0.50-0.55       13          25         0.52662         5.4363
+ 0.45-0.50        1          14         0.47470         2.1459
+ 0.40-0.45        0          11         0.42996         1.5737
+ 0.35-0.40        0           1         0.39399         0.1431
+ 
+ 
+Data Role=VALIDATE Target Variable=good_bad Target Label=' '
+ 
+ Posterior     Number                     Mean
+Probability      of      Number of     Posterior
+   Range       Events    Nonevents    Probability    Percentage
+ 
+ 0.85-0.90       19           2         0.86919         10.5
+ 0.80-0.85       33           3         0.82119         18.0
+ 0.75-0.80       20           4         0.77430         12.0
+ 0.70-0.75       16           2         0.72887          9.0
+ 0.65-0.70       25           9         0.67637         17.0
+ 0.60-0.65       18          21         0.63024         19.5
+ 0.55-0.60        4           5         0.57245          4.5
+ 0.50-0.55        1          10         0.52497          5.5
+ 0.45-0.50        3           4         0.48944          3.5
+ 0.40-0.45        1           0         0.43807          0.5
